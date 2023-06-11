@@ -22,7 +22,7 @@ const Track = ({ isPlaying, isActive, activeSong }) => (
         <p className="truncate text-gray-300">
           {activeSong?.subtitle ? activeSong?.subtitle : "No active Song"}
         </p>
-        <a href={activeSong?.hub?.actions[1]?.uri} download>
+        <a href={activeSong?.hub?.actions?.[1]?.uri} download>
           <BsDownload
             color="white"
             size={20}
